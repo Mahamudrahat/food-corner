@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Corner</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/5f092a7ab8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="sticky top-0 z-20 bg-gray-100 container mx-auto shadow-lg">
+        <h1 class="text-5xl text-green-600 font-sans font-bold text-center">Welcome to Fresh Food Corner</h1>
+        <section class="text-center p-10">
+            <input id="search-input" type="text" placeholder="Search your food"
+                class="input input-bordered w-full max-w-xs p-2" />
+            <button id="btn-search" onclick="loadFood()" class="btn btn-primary">Search</button>
+        </section>
+    </header>
+    <main class="container mx-auto mt-8">
+        <section>
+
+            <!--result-->
+            <div id="result-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
+            </div>
+        </section>
+        <!--Modal-->
+        <dialog id="showMealDetailModel" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box w-11/12 max-w-5xl">
+        <div id="meal-detail-container">
+          
+        </div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+
+    </main>
+    <script src="food.js">
+
+    </script>
+</body>
+
+</html>
